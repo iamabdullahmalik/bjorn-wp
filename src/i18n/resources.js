@@ -1,3 +1,5 @@
+import { fetchSiteData } from '../utils/getSiteData';
+const siteData = await fetchSiteData();
 export const resources = {
   en: {
     translation: {
@@ -7,7 +9,7 @@ export const resources = {
       all: 'All',
       retail: 'Retail',
       hospitality: 'Hospitality',
-      'public space': 'Public space',
+      'Public space': 'Public space',
       private: 'Private',
       object: 'Object',
 
@@ -42,25 +44,26 @@ export const resources = {
       Approach: 'Approach',
       People: 'People',
       //about
-      Established: 'Established in 2015, Studio',
+      Established: siteData.acf.about_detail,
       Designer:
-        'is a multidisciplinary designer practice in and around fields of interior, space design and product development. While his output is varied, his work is unified by a desire to create compelling and personal designs that tell stories without words. Fuelled by a ',
+        siteData.acf.en_about_detail_designer,
       AboutMore:
-        'Our work is a constant investigation, exploration and experimentation in geometry, form, structure, materiality, detail, tonality, colour, atmosphere, mass, void, weight and composition. This process driven methodology is inextricably linked to the aforementioned values to ensure projects are cohesive, relevant, respectful and impactful.',
+        siteData.acf.about_more,
       ReadMore: 'Read more',
       ReadLess: 'Read less',
 
       //Approach
-      BriefingText:
-        'Our work is a constant investigation, exploration and experimentation in geometry, form, structure, materiality, detail, tonality, colour, atmosphere, mass, void, weight and composition.',
-      ConceptText:
-        'This process driven methodology is inextricably linked to the aforementioned values to ensure projects are cohesive, relevant, respectful and impactful.',
-      Realisation: 'Realisation',
-      RealisationText:
-        'Our work is a constant investigation, exploration and experimentation in geometry, form, structure, materiality, detail, tonality, colour.',
+      AboutApproch: siteData.acf.en_description,
+      Briefing: siteData.acf.en_briefing,
+      BriefingText: siteData.acf.en_briefing_description,
+      Concept:siteData.acf.en_concept,
+      ConceptText: siteData.acf.en_concept_description,
+      Realisation: siteData.acf.en_realisation,
+      RealisationText: siteData.acf.en_realisation_description,
 
       //Clients
-      SelectedClients: 'select private customers',
+      AboutClient: siteData.acf.about_client,
+      SelectedClients: siteData.acf.extra_about_client,
 
       //Info
       ViewOnMap: 'View on map',
@@ -79,7 +82,7 @@ export const resources = {
       all: 'Alles',
       retail: 'Winkel',
       hospitality: 'Horeca',
-      'public space': 'Publieke plaats',
+      'Public space': 'Publieke plaats',
       private: 'Privé',
       object: 'Object',
 
@@ -115,11 +118,11 @@ export const resources = {
       Approach: 'Aanpak',
       People: 'Mensen',
       //about
-      Established: 'Opgericht in 2015, Studio',
+      Established: siteData.acf.nl_about_detail,
       Designer:
-        'is een multidisciplinaire ontwerppraktijk op en rond het gebied van interieur, ruimteontwerp en productontwikkeling. Terwijl zijn output gevarieerd is, wordt zijn werk verenigd door een verlangen om meeslepende en persoonlijke ontwerpen die verhalen vertellen zonder woorden te maken. Gevoed door een',
+        siteData.acf.nl_about_detail_designer,
       AboutMore:
-        'Ons werk is een voortdurend onderzoek, exploratie en experiment in geometrie, vorm, structuur, materialiteit, detail, tonaliteit, kleur, sfeer, massa, leegte, gewicht en compositie. Deze procesgestuurde methodologie is onafscheidelijk verbonden met bovengenoemde waarden om ervoor te zorgen dat projecten samenhangend, relevant, respectvol en impactvol zijn.',
+        siteData.acf.nl_about_more,
       ReadMore: 'Lees meer',
       ReadLess: 'Lees minder',
 
@@ -127,16 +130,17 @@ export const resources = {
         'Opgericht in 2015, Studio Bjorn Verlinde is een multidisciplinaire ontwerppraktijk op en rond het gebied van interieur, ruimteontwerp en productontwikkeling. Terwijl zijn output gevarieerd is, wordt zijn werk verenigd door een verlangen om meeslepende en persoonlijke ontwerpen die verhalen vertellen zonder woorden te maken. Gevoed door een team',
 
       //Approach
-      BriefingText:
-        'Ons werk is een voortdurend onderzoek, verkenning en experiment in geometrie, vorm, structuur, materialiteit, detail, tonaliteit, kleur, sfeer, massa, leegte, gewicht en compositie.',
-      ConceptText:
-        'Deze procesgestuurde methodologie is onlosmakelijk verbonden met bovengenoemde waarden om ervoor te zorgen dat projecten samenhangend, relevant, respectvol en impactvol zijn.',
-      Realisation: 'Realisering',
-      RealisationText:
-        'Ons werk is een voortdurend onderzoek, verkenning en experiment in geometrie, vorm, structuur, materialiteit, detail, tonaliteit, kleur.',
+      AboutApproch: siteData.acf.nl_description,
+      Briefing: siteData.acf.nl_briefing,
+      BriefingText: siteData.acf.nl_briefing_description,
+      Concept:siteData.acf.nl_concept,
+      ConceptText: siteData.acf.nl_concept_description,
+      Realisation: siteData.acf.nl_realisation,
+      RealisationText:siteData.acf.nl_realisation_description,
 
       //Clients
-      SelectedClients: 'selecte particuliere klanten',
+      AboutClient: siteData.acf.nl_about_client,
+      SelectedClients: siteData.acf.nl_extra_about_client,
 
       //info
       ViewOnMap: 'Bekijk op kaart',

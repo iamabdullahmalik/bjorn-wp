@@ -123,11 +123,11 @@ export const WorkDetail = () => {
   const { x, y } = useMousePos();
 
   const scrollDirectionDiv = (e) => {
-    const devideBy = scrollRef.current.scrollWidth / work.images.length;
+    const devideBy = scrollRef.current.scrollWidth / work.acf.images.length;
     const scrollDevided = e.target.scrollLeft / devideBy + 1;
     if (Math.round(scrollDevided) < 1) {
       setImgRefIndex(1);
-    } else if (imgRefIndex <= work.images.length) {
+    } else if (imgRefIndex <= work.acf.images.length) {
       setImgRefIndex(Math.round(scrollDevided));
     }
   };
@@ -190,7 +190,7 @@ export const WorkDetail = () => {
       } else {
         index = workIndex - 1;
       }
-      navigate(`/work/${works[index].title}`);
+      navigate(`/work/${works[index].acf.title}`);
     } else if (
       y > (window.innerHeight / 8) * 7 &&
       x > (window.innerWidth / 5) * 2 &&
@@ -203,35 +203,34 @@ export const WorkDetail = () => {
       } else {
         index = workIndex + 1;
       }
-      navigate(`/work/${works[index].title}`);
+      navigate(`/work/${works[index].acf.title}`);
     }
   };
-
   return (
     <DetailWrapper
       onClick={(e) => newProject(e)}
       onkeydown={(e) => handleKeySwipe(e)}>
       <InfoWrapper>
         <BjornTextTop to='/'>
-          {t('For')} {work.client}
+          {t('For')} {work.acf.client}
         </BjornTextTop>
         <SmallText>
-          {work.title} ({t(work.category)}), {work.year}
+          {work.acf.title} ({t(work.acf.category)}), {work.acf.year}
         </SmallText>
       </InfoWrapper>
       <WorkWrapper>
         <WorkImagesWrapper
           ref={scrollRef}
           onScroll={(e) => scrollDirectionDiv(e)}>
-          {work.images.map((img, index) => {
-            const imageName = img.asset._ref.split('-');
+          {work.acf.images.map((img, index) => {
+            const imageName = img.image;
             return (
               <WorkImage
                 index={index}
                 setImgRefs={setImgRefs}
                 imgRefs={imgRefs}
                 imgName={imageName}
-                imgLength={work.images.length}
+                imgLength={work.acf.images.length}
                 setImgRestart={setImgRestart}
                 imgRestart={imgRestart}
               />
@@ -251,7 +250,7 @@ export const WorkDetail = () => {
         /{' '}
         {showImages ? (
           <Underline>
-            {t('Images')} ({imgRefIndex}/{work.images.length})
+            {t('Images')} ({imgRefIndex}/{work.acf.images.length})
           </Underline>
         ) : (
           <TextImgButton onClick={() => setShowImages(true)}>

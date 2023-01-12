@@ -37,21 +37,19 @@ const WorkImg = styled.img`
 `;
 
 export const WorkOverviewImg = ({ work }) => {
-  const imgName = work.images[0].asset._ref.split('-');
+  const imgName = work.acf.images[0].image;
   let navigate = useNavigate();
   const navigateToDetail = (workTitle) => {
     navigate(`/work/${workTitle}`);
   };
   return (
-    <OverviewImgWrapper onClick={() => navigateToDetail(work.title)}>
+    <OverviewImgWrapper onClick={() => navigateToDetail(work.acf.title)}>
       <WorkImg
-        src={`${import.meta.env.VITE_IMG_URL}/images/f0dahbwy/production/${
-          imgName[1]
-        }-${imgName[2]}.${imgName[3]}`}
-        alt={`${imgName[1]}`}
+        src={`${imgName.url}`}
+        alt={`${imgName.alt}`}
       />
       <p>
-        {work.title}, {work.year}
+        {work.acf.title}, {work.acf.year}
       </p>
     </OverviewImgWrapper>
   );

@@ -34,7 +34,7 @@ export const WorkImage = ({ work, index, imgRefs, setImgRefs }) => {
 
   const imgRef = useRef();
 
-  const imageName = work.images[0].asset._ref.split('-');
+  const imageName = work.acf.images[0].image.url;
 
   useEffect(() => {
     const _imgRefs = imgRefs;
@@ -48,10 +48,8 @@ export const WorkImage = ({ work, index, imgRefs, setImgRefs }) => {
       id={index}
       onClick={() => navigateToDetail(work.title)}>
       <FirstImage
-        src={`${import.meta.env.VITE_IMG_URL}/images/f0dahbwy/production/${
-          imageName[1]
-        }-${imageName[2]}.${imageName[3]}`}
-        alt={imageName[1]}
+        src={`${imageName}`}
+        alt='foto'
       />
       <WorkTitle>
         {work.title}, {work.year}

@@ -34,20 +34,18 @@ export const WorkImageWork = ({ work, index }) => {
     navigate(`${workTitle}`);
   };
 
-  const imageName = work.images[0].asset._ref.split('-');
+  const imageName = work.acf.images[0].image;
   const { t } = useTranslation();
   return (
     <ImageWrapper
       isFirst={index === 0 ? true : false}
-      onClick={() => navigateToDetail(work.title)}>
+      onClick={() => navigateToDetail(work.acf.title)}>
       <FirstImage
-        src={`${import.meta.env.VITE_IMG_URL}/images/f0dahbwy/production/${
-          imageName[1]
-        }-${imageName[2]}.${imageName[3]}`}
-        alt={imageName[1]}
+        src={`${imageName.url}`}
+        alt={imageName.alt}
       />
       <WorkTitle>
-        {work.title}, (<Underline>{t(`${work.category}`)}</Underline>)
+        {work.acf.title}, (<Underline>{t(`${work.acf.category}`)}</Underline>)
       </WorkTitle>
     </ImageWrapper>
   );

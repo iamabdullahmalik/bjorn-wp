@@ -21,12 +21,12 @@ export const WorkImage = ({
   imgRestart,
 }) => {
   const imgRef = useRef();
-  const dimensions = imgName[2].split('x');
 
   useEffect(() => {
     const _imgRefs = imgRefs;
     _imgRefs.push(imgRef);
     setImgRefs(_imgRefs);
+    //console.log("compare", index +'==='+ imgLength)
     if (index + 1 === imgLength && !imgRestart) {
       setImgRestart(true);
     }
@@ -34,13 +34,11 @@ export const WorkImage = ({
   return (
     <>
       <WorkImg
-        key={imgName[1]}
+        key={index}
         ref={imgRef}
-        isVertical={+dimensions[0] < +dimensions[1]}
-        src={`${import.meta.env.VITE_IMG_URL}/images/f0dahbwy/production/${
-          imgName[1]
-        }-${imgName[2]}.${imgName[3]}`}
-        alt={`${imgName[1]}`}
+        isVertical={+imgName.sizes['large-width'] < +imgName.sizes['large-height']}
+        src={`${imgName.url}`}
+        alt={`${imgName.alt}`}
       />
     </>
   );

@@ -68,17 +68,17 @@ export const WorkTextInfo = ({ work, showText }) => {
       </WorkAboutText>
       <WorkDetailInfoList>
         <WorkDetailInfoLabel>{t('Year')}</WorkDetailInfoLabel>
-        <WorkDetailInfoText>{work.year}</WorkDetailInfoText>
+        <WorkDetailInfoText>{work.acf.year}</WorkDetailInfoText>
         <WorkDetailInfoLabel>{t('Client')}</WorkDetailInfoLabel>
-        <WorkDetailInfoText>{work.client}</WorkDetailInfoText>
+        <WorkDetailInfoText>{work.acf.client}</WorkDetailInfoText>
         <WorkDetailInfoLabel>{t('Location')}</WorkDetailInfoLabel>
-        <WorkDetailInfoText>{work.location}</WorkDetailInfoText>
+        <WorkDetailInfoText>{work.acf.location}</WorkDetailInfoText>
         <WorkDetailInfoLabel>{t('Size')}</WorkDetailInfoLabel>
-        <WorkDetailInfoText>{work.size}</WorkDetailInfoText>
+        <WorkDetailInfoText>{work.acf.size}</WorkDetailInfoText>
         <WorkDetailInfoLabel>{t('Status')}</WorkDetailInfoLabel>
-        <WorkDetailInfoText>{t(work.status)}</WorkDetailInfoText>
+        <WorkDetailInfoText>{t(work.acf.status)}</WorkDetailInfoText>
         <WorkDetailInfoLabel>{t('Photography')}</WorkDetailInfoLabel>
-        <WorkDetailInfoText>{work.photography}</WorkDetailInfoText>
+        <WorkDetailInfoText>{work.acf.photography}</WorkDetailInfoText>
       </WorkDetailInfoList>
     </WorkTextWrapper>
   );

@@ -28,15 +28,14 @@ export const ProfileAproach = () => {
   return (
     <AproachWrapper>
       <AproachText>
-        Our approach isem ipsum dolor sit amter. Sigat amor calcium prozac fin
-        famosa purit fame bowie.
+      {t('AboutApproch')}
       </AproachText>
       <AproachText>
-        <AproachTitle>Briefing</AproachTitle> <br />
+        <AproachTitle>{t('Briefing')}</AproachTitle> <br />
         {t('BriefingText')}
       </AproachText>
       <AproachText>
-        <AproachTitle>Concept</AproachTitle> <br />
+        <AproachTitle>{t('Concept')}</AproachTitle> <br />
         {t('ConceptText')}
       </AproachText>
       <AproachText>

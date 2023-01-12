@@ -23,9 +23,9 @@ export const WorkIndex = ({ work }) => {
   };
   const { t } = useTranslation();
   return (
-    <WorkIndexWrapper onClick={() => navigateToDetail(work.title)}>
-      <p>{work.title}</p>
-      <WorkYear>({t(`${work.category}`)})</WorkYear>
+    <WorkIndexWrapper onClick={() => navigateToDetail(work.acf.title)}>
+      <p>{work.acf.title}</p>
+      <WorkYear>({t(`${work.acf.category}`)})</WorkYear>
     </WorkIndexWrapper>
   );
 };

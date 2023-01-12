@@ -51,10 +51,7 @@ export const StudioClients = () => {
       </NavWrapper>
       <ClientsWrapper>
         <ClientsText>
-          Balls&Glory, Brando, Carcasse, Domus Plus, Effeitalia, Dierendonck, ‘t
-          Vliegend Tapijt,Limited Edition, Mint, Modular, Nick Bril,
-          Nightingale, Oculus, Oracdecor, Signatuur, The Jane, Verilin, Vonk,
-          WAW Floors.
+        {t('AboutClient')}
         </ClientsText>
         <ClientsText>& {t('SelectedClients')}</ClientsText>
       </ClientsWrapper>

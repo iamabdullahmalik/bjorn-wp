@@ -110,24 +110,20 @@ export const WorkDetail = () => {
     <DetailWrapper>
       <InfoWrapper>
         <BjornTextTopMobile to='/'>
-          {t('For')} {work.client}
+          {t('For')} {work.acf.client}
         </BjornTextTopMobile>
         <SmallText>
-          {work.title}, {work.year}
+          {work.acf.title}, {work.acf.year}
         </SmallText>
       </InfoWrapper>
       <WorkWrapper>
         <WorkImagesWrapper>
-          {work.images.map((img, index) => {
-            const imageName = img.asset._ref.split('-');
+          {work.acf.images.map((img, index) => {
+            const imageName = img.image;
             return (
               <WorkImage
-                src={`${
-                  import.meta.env.VITE_IMG_URL
-                }/images/f0dahbwy/production/${imageName[1]}-${imageName[2]}.${
-                  imageName[3]
-                }`}
-                alt={`${work.title} ${index}`}
+                src={`${imageName.url}`}
+                alt={`${imageName.alt} ${index}`}
               />
             );
           })}

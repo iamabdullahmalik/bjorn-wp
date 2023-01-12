@@ -134,16 +134,16 @@ export const WorkIndex = () => {
       <WorkListWrapper>
         {works.map((work, index) => {
           const number = index + 1;
-          const imageName = work.images[0].asset._ref.split('-');
+          const imageName = work.acf.images[0].image;
 
           return (
             <WorkIndexItem
               notCrossed={
-                filter === work.category || filter === 'all' || filter === ''
+                filter === work.acf.category || filter === 'all' || filter === ''
                   ? true
                   : false
               }
-              onClick={() => navigateToDetail(work.title)}
+              onClick={() => navigateToDetail(work.acf.title)}
               key={work.title}
               nr={number}>
               <WorkIndexNumber className='backgroundHover'>
@@ -153,18 +153,14 @@ export const WorkIndex = () => {
                 })}
               </WorkIndexNumber>
               <WorkIndexText className='workItemTitle'>
-                {work.title} <span>{t('For')}</span> {work.client}
+                {work.acf.title} <span>{t('For')}</span> {work.acf.client}
               </WorkIndexText>
               <WorkIndexYear className='backgroundHover'>
-                {work.year}
+                {work.acf.year}
               </WorkIndexYear>
               <WorkImage
                 className={`workImage${number}`}
-                src={`${
-                  import.meta.env.VITE_IMG_URL
-                }/images/f0dahbwy/production/${imageName[1]}-${imageName[2]}.${
-                  imageName[3]
-                }`}
+                src={`${imageName.url}`}
               />
             </WorkIndexItem>
           );

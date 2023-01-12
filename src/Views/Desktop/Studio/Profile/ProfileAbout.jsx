@@ -121,8 +121,6 @@ export const ProfileAbout = () => {
             onMouseLeave={() => setBackgroundImage(null)}>
             team²
           </HoverSpan>{' '}
-          lorem ipsum dolor sit amter. Sigat amor calcium prozac fin famosa
-          purit fame bowie.
         </StudioProfileText>
         {readMore ? (
           <Fade out={fade}>{t('AboutMore')}</Fade>

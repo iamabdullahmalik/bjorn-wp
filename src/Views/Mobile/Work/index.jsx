@@ -83,7 +83,7 @@ export const Work = () => {
               return <WorkImageWork key={index} work={work} index={index} />;
             }
           }
-          if (work.category === filter) {
+          if (work.acf.category === filter) {
             if (showIndex) {
               return <WorkIndex key={index} work={work} index={index} />;
             }

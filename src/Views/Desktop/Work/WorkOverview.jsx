@@ -77,7 +77,7 @@ export const WorkOverview = () => {
             return <WorkOverviewImg work={work} />;
           }
 
-          if (work.category === filter) {
+          if (work.acf.category === filter) {
             return <WorkOverviewImg work={work} />;
           }
         })}

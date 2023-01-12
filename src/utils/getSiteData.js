@@ -1,11 +1,10 @@
-import { works } from '../Constants/Works';
-import { formatData } from './formatData';
+//import { siteData } from '../Constants/SiteData';
 
-export const fetchWorks = async () => {
+export const fetchSiteData = async () => {
     const response = await fetch(
       `${
         import.meta.env.VITE_WP_URL
-      }/wp-json/acf/v3/works`,
+      }/wp-json/acf/v3/pages/10`,
       {
         headers: {
           'Content-Type': 'application/json',
@@ -18,12 +17,13 @@ export const fetchWorks = async () => {
     }
 
     const data = await response.json();
-    const formattedWorks = await formatData(data);
+    const formattedWorks = data;
+    //siteData.push(data);
     if (formattedWorks) {
       sessionStorage.setItem(
-        'bjorn-verlinde_work',
+        'bjorn-verlinde_sitedata',
         JSON.stringify(formattedWorks)
       );
-      return true;
+      return data;
     }
 };
