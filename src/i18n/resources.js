@@ -72,6 +72,14 @@ export const resources = {
       OfficeHours: 'Office Hours',
       MondayFriday: 'Monday—Friday',
       BelgiumCurrentTime: 'Belgium Current Time',
+      Adress:siteData.acf.adress,
+      Phone: siteData.acf.mobile_number,
+      MapUrl: siteData.acf.map_url,
+      GeneralEmail: siteData.acf.general_inquiries_email,
+      JobEmail: siteData.acf.jobs_and_internships_email,
+      Instagram: siteData.acf.instagram,
+      OfficeHrs: siteData.acf.office_hours,
+
     },
   },
   nl: {
@@ -149,6 +157,13 @@ export const resources = {
       OfficeHours: 'Kantooruren',
       MondayFriday: 'Maandag-vrijdag',
       BelgiumCurrentTime: 'Locale Belgische Tijd',
+      Adress:siteData.acf.adress,
+      Phone: siteData.acf.mobile_number,
+      MapUrl: siteData.acf.map_url,
+      GeneralEmail: siteData.acf.general_inquiries_email,
+      JobEmail: siteData.acf.jobs_and_internships_email,
+      Instagram: siteData.acf.instagram,
+      OfficeHrs: siteData.acf.office_hours,
     },
   },
 };

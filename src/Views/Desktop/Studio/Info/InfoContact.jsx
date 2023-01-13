@@ -59,13 +59,12 @@ export const InfoContact = () => {
   return (
     <InfoContactWrapper>
       <InfoContactText>
-        Studio Bjorn Verlinde, Hugo Verriestlaan 5 <br />B - 8800 Roeselare,
-        Belgium
+      {t('Adress')}
         <br />
-        +32 (0)499 737 487
+        +{t('Phone')}
         <br />
         <ViewOnMapLink
-          href='https://goo.gl/maps/UWws26kdgo6k8ibD8'
+          href={t('MapUrl')}
           target='_blank'>
           {t('ViewOnMap')}
         </ViewOnMapLink>
@@ -73,25 +72,25 @@ export const InfoContact = () => {
       <InfoContactText>
         <ContactTitle>{t('GeneralInquiries')}</ContactTitle>
         <br />
-        <a href='mailto:hello@bjornverlinde.studio'>
-          hello@bjornverlinde.studio
+        <a href={"mailto:" + t("GeneralEmail")}>
+        {t('GeneralEmail')}
         </a>
       </InfoContactText>
       <InfoContactText>
         <ContactTitle>{t('JobsInternships')}</ContactTitle>
         <br />
-        <a href='mailto:jobs@bjornverlinde.studio'>jobs@bjornverlinde.studio</a>
+        <a href={"mailto:" + t("JobEmail")}>{t('JobEmail')}</a>
       </InfoContactText>
       <InfoContactText>
         <ContactTitle>Instagram</ContactTitle>
         <br />
-        <a href='https://www.instagram.com/bjornverlinde/' target='_blank'>
-          @bjornverlinde
+        <a href={"https://www.instagram.com/" + t("Instagram").replace('@', '')} target='_blank'>
+        {t('Instagram')}
         </a>
       </InfoContactText>
       <InfoContactText>
         <ContactTitle>{t('OfficeHours')}</ContactTitle>
-        <br /> {t('MondayFriday')}: 09:00-18:00 <br />
+        <br /> {t('MondayFriday')}: {t('OfficeHrs')} <br />
         {t('BelgiumCurrentTime')}: {time}
       </InfoContactText>
     </InfoContactWrapper>
