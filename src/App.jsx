@@ -11,7 +11,7 @@ import { Home as HomeMobile } from './Views/Mobile/Home';
 import { Work as WorkMobile } from './Views/Mobile/Work';
 import { Studio as StudioMobile } from './Views/Mobile/Studio';
 import { WorkDetail as WorkDetailMobile } from './Views/Mobile/Work/WorkDetail';
-import { InfoContact } from './Views/Mobile/info/InfoContact';
+// import { InfoContact } from './Views/Mobile/info/InfoContact';
 import { CirclePointer } from './Components/CirlePointer';
 import { WorkPointer } from './Components/WorkPointer';
 import { WorkOverview } from './Views/Desktop/Work/WorkOverview';
@@ -70,7 +70,7 @@ export const App = () => {
         <Routes>
           <Route path='/work/:workTitle' element={<WorkDetailMobile />} />
           <Route path='/studio' element={<StudioMobile />} />
-          <Route path='/info' element={<InfoContact />} />
+          {/* <Route path='/info' element={<InfoContact />} /> */}
           <Route path='/work' element={<WorkMobile />} />
           <Route path='/' element={<HomeMobile />} />
         </Routes>
