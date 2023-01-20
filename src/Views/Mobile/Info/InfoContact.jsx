@@ -1,4 +1,4 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import Div100vh from 'react-div-100vh';
 import styled from 'styled-components';
@@ -27,6 +27,7 @@ const ViewOnMapLink = styled.a`
 `;
 
 export const InfoContact = () => {
+  const { t } = useTranslation();
   const [time, setTime] = useState(
     new Date().toLocaleString('en-GB', {
       timeZone: 'Europe/Brussels',
