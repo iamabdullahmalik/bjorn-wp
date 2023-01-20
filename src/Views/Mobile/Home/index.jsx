@@ -78,9 +78,9 @@ export const Home = () => {
   const scrollRef = useRef();
 
   useEffect(() => {
-    if (activeWork >= works.length) {
-      return;
-    }
+    // if (activeWork >= works.length) {
+    //   return;
+    // }
     const scroll = setInterval(
       () => imgRefs[activeWork].current.scrollIntoView(),
       10000
@@ -102,7 +102,7 @@ export const Home = () => {
       setActiveWork(Math.round(scrollDevided));
     }
   };
-  const colors = ['white', 'green', 'blue', 'red'];
+  const colors = ['#e3e3e3', '#e3e3e3', '#e3e3e3', '#e3e3e3'];
 
   useEffect(() => {
     const dividedNr = Math.floor(activeWork / 4);
@@ -145,7 +145,7 @@ export const Home = () => {
           {', '}
           <NavLink to='/info'>Info</NavLink>
           {', '}
-          <a href='https://www.instagram.com/bjornverlinde/' target='_blank'>
+          <a href={"https://www.instagram.com/" + t("Instagram").replace('@', '')} target='_blank'>
             Instagram
           </a>
         </NavWrapper>

@@ -66,7 +66,7 @@ const NavWrapper = styled.div`
   height: 4rem;
   top: calc(100% - 40px);
   z-index: 50000;
-  background-color: white;
+  background-color: #e3e3e3;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -107,28 +107,22 @@ export const Studio = () => {
           <BjornImage src='./bjorn.jpg' />
           <LongReadTitle>{t('About')}</LongReadTitle>
           <LongReadText>
-            {t('AboutMobile')}lorem ipsum dolor sit amter. Sigat amor calcium
-            prozac fin famosa purit fame bowie.
+            {t('Established')}
+            {t('Designer')}
           </LongReadText>
           <LongReadText>
-            {t('AboutMore')}
-            respectful and impactful.
+          {t('AboutMore')}
           </LongReadText>
         </StudioSection>
         <StudioSection ref={approachRef}>
-          <LongReadText>
-            Our approach isem ipsum dolor sit amter. Sigat amor calcium prozac
-            fin famosa purit fame bowie.
-          </LongReadText>
           <AproachText>
-            <AproachTitle>Briefing</AproachTitle> <br />
+            <AproachTitle>{t('Briefing')}</AproachTitle> <br />
             {t('BriefingText')}
           </AproachText>
           <AproachText>
-            <AproachTitle>Concept</AproachTitle> <br />
+            <AproachTitle>{t('Concept')}</AproachTitle> <br />
             {t('ConceptText')}
           </AproachText>
-
           <AproachText>
             <AproachTitle>{t('Realisation')} </AproachTitle>
             <br />

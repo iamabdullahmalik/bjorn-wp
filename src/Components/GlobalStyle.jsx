@@ -34,7 +34,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: Suisse Works , Serif;
-    background-color: white;
+    background-color: #e3e3e3;
   }
 
  a{

@@ -12,8 +12,8 @@ const ImageWrapper = styled.div`
 `;
 
 const FirstImage = styled.img`
-  height: 30vh;
-  aspect-ratio: 2560/1707;
+  height: 40vh;
+  aspect-ratio: 3/2;
   object-fit: contain;
   align-self: center;
   justify-self: center;
@@ -46,13 +46,13 @@ export const WorkImage = ({ work, index, imgRefs, setImgRefs }) => {
     <ImageWrapper
       ref={imgRef}
       id={index}
-      onClick={() => navigateToDetail(work.title)}>
+      onClick={() => navigateToDetail(work.acf.title)}>
       <FirstImage
         src={`${imageName}`}
         alt='foto'
       />
       <WorkTitle>
-        {work.title}, {work.year}
+        {work.acf.title}, {work.acf.year}
       </WorkTitle>
     </ImageWrapper>
   );
