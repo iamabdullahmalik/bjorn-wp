@@ -141,12 +141,14 @@ export const Home = () => {
     } else {
       setBgColor(colors[0]);
     }
+    if (activeWork == works.length) {
+      setTimeout(() => {
+        scrollRef.current.scrollTo(0,0);
+      }, 10000);
+    }
   }, [activeWork]);
 
   useEffect(() => {
-    // if (activeWork >= works.length) {
-    //   return;
-    // }
     const scroll = setInterval(
       () => workRefs[activeWork].current.scrollIntoView(),
       10000
