@@ -114,27 +114,22 @@ const ArrowButtonDown = styled.button`
 export const Home = () => {
   const scrollRef = useRef();
 
-  const [activeWork, setActiveWork] = useState(0);
+  const [activeWork, setActiveWork] = useState(1);
   const [bgColor, setBgColor] = useState("white");
   const inputRefs = useRef([]);
   const [workRefs, setWorkRefs] = useState([]);
-
-  const { x, y } = useMousePos();
 
   const scrollDirectionDiv = (e) => {
     if (
       e.target.scrollTop >
       e.target.scrollHeight - (e.target.scrollHeight / 100) * 15
     ) {
-      //scrollRef.current.scrollTo(0,0);
       window.location.reload(true);
     }
     const devideBy = scrollRef.current.scrollHeight / works.length;
     const scrollDevided = e.target.scrollTop / devideBy + 1;
     setActiveWork(Math.round(scrollDevided));
   };
-
-  //const colors = ['white', 'green', 'blue', 'red'];
   const colors = ["#e3e3e3", "#e3e3e3", "#e3e3e3", "#e3e3e3"];
 
   useEffect(() => {
@@ -146,17 +141,34 @@ export const Home = () => {
     }
   }, [activeWork]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    setTimeout(() => setActiveWork(1), 500);
+  }
   useEffect(() => {
     let scroll;
-    if (activeWork) {
+    if (activeWork && workRefs.length) {
       scroll = setInterval(() => {
-        const nextWork = activeWork === works.length ? 0 : activeWork;
-        workRefs[nextWork].current.scrollIntoView();
-        setActiveWork(nextWork);
-      }, 10000);
+        const nextWork = activeWork === works.length ? 0 : activeWork + 1;
+        if(workRefs[nextWork-1] && workRefs[nextWork-1].current) {
+          workRefs[nextWork-1].current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        if (activeWork === works.length) {
+          scrollToTop();
+          setTimeout(() => {
+            if(workRefs[0] && workRefs[0].current) {
+              workRefs[0].current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              setActiveWork(1);
+            }
+          }, 1000);
+        } else {
+          setActiveWork(nextWork);
+        }
+      }, 1000);
     }
     return () => clearInterval(scroll);
   }, [activeWork, workRefs, works.length]);
+
 
   const { t, i18n } = useTranslation();
 
@@ -175,9 +187,10 @@ export const Home = () => {
             const newRef = useRef();
             return (
               <WorkImage
+                key={index}
                 index={index}
                 work={work}
-                ref={newRef}
+                innerRef={newRef}
                 inputRefs={inputRefs}
                 workRefs={workRefs}
                 setWorkRefs={setWorkRefs}

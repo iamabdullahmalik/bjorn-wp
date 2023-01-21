@@ -35,10 +35,9 @@ export const WorkImage = ({
   worksLength,
   workRefs,
   setWorkRefs,
-  newRef
+  innerRef
 }) => {
   let navigate = useNavigate();
-  const workRef = useRef();
   const navigateToDetail = (workTitle) => {
     navigate(`work/${workTitle}`);
   };
@@ -48,15 +47,15 @@ export const WorkImage = ({
 
   useEffect(() => {
     const _workRefs = workRefs;
-    if(!_workRefs.includes(workRef))
-    _workRefs.push(workRef);
+    if(!_workRefs.includes(innerRef))
+    _workRefs.push(innerRef);
     setWorkRefs(_workRefs);
   }, []);
 
   return (
     <ImageWrapper
       first={index === 0 ? true : false}
-      ref={workRef}
+      ref={innerRef}
       last={index + 1 === worksLength ? true : false}
       onClick={() => navigateToDetail(work.acf.title)}
       key={index}>
