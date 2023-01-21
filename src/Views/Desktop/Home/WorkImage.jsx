@@ -35,6 +35,7 @@ export const WorkImage = ({
   worksLength,
   workRefs,
   setWorkRefs,
+  newRef
 }) => {
   let navigate = useNavigate();
   const workRef = useRef();
@@ -47,6 +48,7 @@ export const WorkImage = ({
 
   useEffect(() => {
     const _workRefs = workRefs;
+    if(!_workRefs.includes(workRef))
     _workRefs.push(workRef);
     setWorkRefs(_workRefs);
   }, []);
