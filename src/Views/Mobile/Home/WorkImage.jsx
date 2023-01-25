@@ -12,7 +12,7 @@ const ImageWrapper = styled.div`
 `;
 
 const FirstImage = styled.img`
-  height: 40vh;
+  height: 30vh;
   aspect-ratio: 3/2;
   object-fit: contain;
   align-self: center;
@@ -24,6 +24,7 @@ const WorkTitle = styled.p`
   margin-top: 0.8rem;
   font-size: 0.8vw;
   font-size: 1.6rem;
+  font-weight: 300;
 `;
 
 export const WorkImage = ({ work, index, imgRefs, setImgRefs }) => {
