@@ -55,22 +55,30 @@ const WorkTextWrapper = styled.div`
   animation: ${SlideUpAnimation} 0.5s ease-out;
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+  font-size: 0.8vw;
+  font-size: 1.6rem;
+  margin: 0;
+
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
 export const WorkTextInfo = ({ work, showText }) => {
   const { t } = useTranslation();
   const lang = i18next.language;
   return (
     <WorkTextWrapper show={showText}>
       <WorkAboutText>
-        {work[lang]} tekst is longer and longer so we see diffrece. tekst is
-        longer and longer diffrece . tend longer so we see diffrece longer so we
-        see diffrece. tekst is longer and longer so we see diffrec tekst is
-        longer and longer e diffrec tekst is longer and longer
+        {lang == 'en' ? work.acf.about_en : work.acf.about_nl}
       </WorkAboutText>
       <WorkDetailInfoList>
         <WorkDetailInfoLabel>{t('Year')}</WorkDetailInfoLabel>
         <WorkDetailInfoText>{work.acf.year}</WorkDetailInfoText>
         <WorkDetailInfoLabel>{t('Client')}</WorkDetailInfoLabel>
-        <WorkDetailInfoText>{work.acf.client}</WorkDetailInfoText>
+        <Link href={work.acf.client_url} target="_blank"><WorkDetailInfoText>{work.acf.client}</WorkDetailInfoText></Link>
         <WorkDetailInfoLabel>{t('Location')}</WorkDetailInfoLabel>
         <WorkDetailInfoText>{work.acf.location}</WorkDetailInfoText>
         <WorkDetailInfoLabel>{t('Size')}</WorkDetailInfoLabel>
@@ -78,7 +86,7 @@ export const WorkTextInfo = ({ work, showText }) => {
         <WorkDetailInfoLabel>{t('Status')}</WorkDetailInfoLabel>
         <WorkDetailInfoText>{t(work.acf.status)}</WorkDetailInfoText>
         <WorkDetailInfoLabel>{t('Photography')}</WorkDetailInfoLabel>
-        <WorkDetailInfoText>{work.acf.photography}</WorkDetailInfoText>
+        <Link href={work.acf.photographer_url_} target="_blank"><WorkDetailInfoText>{work.acf.photography}</WorkDetailInfoText></Link>
       </WorkDetailInfoList>
     </WorkTextWrapper>
   );

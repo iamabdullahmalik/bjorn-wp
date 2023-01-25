@@ -61,6 +61,8 @@ export const InfoContact = () => {
       <InfoContactText>
       {t('Adress')}
         <br />
+        {t('Adress2')}
+        <br />
         +{t('Phone')}
         <br />
         <ViewOnMapLink
