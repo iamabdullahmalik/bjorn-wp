@@ -70,7 +70,7 @@ export const App = () => {
         <Routes>
           <Route path='/work/:workTitle' element={<WorkDetailMobile />} />
           <Route path='/studio' element={<StudioMobile />} />
-          <Route path='/info' element={<InfoContact />} />
+          {/* <Route path='/info' element={<InfoContact />} /> */}
           <Route path='/work' element={<WorkMobile />} />
           <Route path='/' element={<HomeMobile />} />
         </Routes>
