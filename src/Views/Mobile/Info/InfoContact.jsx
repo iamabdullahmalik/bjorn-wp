@@ -1,30 +1,30 @@
-import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
+//import { useTranslation } from 'react-i18next';
+//import { useEffect, useState } from 'react';
 // import Div100vh from 'react-div-100vh';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 // import { BjornTextTopMobile } from '../../../style';
 
-const InfoContactWrapper = styled.div`
-  padding: 2rem;
-`;
+// const InfoContactWrapper = styled.div`
+//   padding: 2rem;
+// `;
 
-const InfoContactText = styled.p`
-  font-size: 1.2vw;
-  font-size: 2.4rem;
-  padding-top: 5rem;
-`;
+// const InfoContactText = styled.p`
+//   font-size: 1.2vw;
+//   font-size: 2.4rem;
+//   padding-top: 5rem;
+// `;
 
-const ContactTitle = styled.span`
-  text-transform: uppercase;
-  font-family: Base Grotesk, sans-serif;
-`;
+// const ContactTitle = styled.span`
+//   text-transform: uppercase;
+//   font-family: Base Grotesk, sans-serif;
+// `;
 
-const ViewOnMapLink = styled.a`
-  font-size: 1.2vw;
-  font-size: 2.4rem;
-  color: black;
-  text-decoration: underline dotted;
-`;
+// const ViewOnMapLink = styled.a`
+//   font-size: 1.2vw;
+//   font-size: 2.4rem;
+//   color: black;
+//   text-decoration: underline dotted;
+// `;
 
 export const InfoContact = () => {
   // const { t } = useTranslation();
