@@ -11,6 +11,7 @@ const LanguageButton = styled.button`
   margin: 0 2rem 2rem 0;
   font-size: 1vw;
   font-size: 2rem;
+  color: black;
   @media (max-width: 860px) {
     font-size: 1.6rem;
   }
