@@ -7,6 +7,7 @@ import { StudioProfile } from './Views/Desktop/Studio/Profile';
 import { WorkDetail } from './Views/Desktop/Work/WorkDetail';
 import { WorkIndex } from './Views/Desktop/Work/WorkIndex';
 
+import { MobileScreen as MainScreen } from './Views/Mobile/Screen';
 import { Home as HomeMobile } from './Views/Mobile/Home';
 import { Work as WorkMobile } from './Views/Mobile/Work';
 import { Studio as StudioMobile } from './Views/Mobile/Studio';
@@ -72,7 +73,8 @@ export const App = () => {
           <Route path='/studio' element={<StudioMobile />} />
           <Route path='/info' element={<InfoContact />} />
           <Route path='/work' element={<WorkMobile />} />
-          <Route path='/' element={<HomeMobile />} />
+          <Route path='/home' element={<HomeMobile />} />
+          <Route path='/' element={<MainScreen />} />
         </Routes>
       </MobileDiv>
     </QuerryDiv>

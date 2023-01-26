@@ -55,7 +55,7 @@ export const InfoContact = () => {
   }, []);
   return (
     <InfoContactWrapper>
-      <BjornTextTopMobile to='/'>Info</BjornTextTopMobile>
+      <BjornTextTopMobile to='/home'>Info</BjornTextTopMobile>
 
       <InfoContactText>
         {t('Adress')}

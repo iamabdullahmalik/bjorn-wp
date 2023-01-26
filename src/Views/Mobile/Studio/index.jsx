@@ -101,7 +101,7 @@ export const Studio = () => {
 
   return (
     <StudioWrapper>
-      <BjornTextTopMobile to='/'>Studio,</BjornTextTopMobile>
+      <BjornTextTopMobile to='/home'>Studio,</BjornTextTopMobile>
       <LongReadWrapper>
         <StudioSection ref={aboutRef}>
           <BjornImage src='./bjorn.jpg' />

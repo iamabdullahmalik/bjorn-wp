@@ -73,7 +73,7 @@ export const Work = () => {
 
   return (
     <WorkWrapper>
-      <WorkTopTitle to={'/'}>{t('Work')},</WorkTopTitle>
+      <WorkTopTitle to={'/home'}>{t('Work')},</WorkTopTitle>
       <WorkListWrapper>
         {works.map((work, index) => {
           if (!filter) {
