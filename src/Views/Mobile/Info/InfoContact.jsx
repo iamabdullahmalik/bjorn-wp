@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
-import Div100vh from 'react-div-100vh';
+// import Div100vh from 'react-div-100vh';
 import styled from 'styled-components';
 import { BjornTextTopMobile } from '../../../style';
 
-const InfoContactWrapper = styled(Div100vh)`
+const InfoContactWrapper = styled.div`
   padding: 2rem;
 `;
 
