@@ -55,6 +55,7 @@ html {
 
   button{
   background: none;
+  color: black;
   border: none;
   padding: 0;
       font-family: Base Grotesk , sans-serif;
