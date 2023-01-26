@@ -12,7 +12,7 @@ const ImageWrapper = styled.div`
 `;
 
 const FirstImage = styled.img`
-  height: 30vh;
+  height: ${(props) => props.setheight};;
   aspect-ratio: 3/2;
   object-fit: contain;
   align-self: center;
@@ -49,6 +49,7 @@ export const WorkImage = ({ work, index, imgRefs, setImgRefs }) => {
       id={index}
       onClick={() => navigateToDetail(work.acf.title)}>
       <FirstImage
+        setheight={work.acf.images[0].image.height > work.acf.images[0].image.width ? "45vh" : "30vh"}
         src={`${imageName}`}
         alt='foto'
       />
