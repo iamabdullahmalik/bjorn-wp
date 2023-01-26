@@ -60,10 +60,12 @@ export const InfoContact = () => {
       <InfoContactText>
         {t('Adress')}
         <br />
+        {t('Adress2')}
+        <br />
         +{t('Phone')}
         <br />
         <ViewOnMapLink
-          href='https://goo.gl/maps/UWws26kdgo6k8ibD8'
+          href={t('MapUrl')}
           target='_blank'>
           {t('ViewOnMap')}
         </ViewOnMapLink>
