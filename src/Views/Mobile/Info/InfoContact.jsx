@@ -27,35 +27,35 @@ const ViewOnMapLink = styled.a`
 `;
 
 export const InfoContact = () => {
-  const { t } = useTranslation();
-  const [time, setTime] = useState(
-    new Date().toLocaleString('en-GB', {
-      timeZone: 'Europe/Brussels',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-    })
-  );
+  // const { t } = useTranslation();
+  // const [time, setTime] = useState(
+  //   new Date().toLocaleString('en-GB', {
+  //     timeZone: 'Europe/Brussels',
+  //     hour: '2-digit',
+  //     minute: '2-digit',
+  //     second: '2-digit',
+  //   })
+  // );
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(
-        new Date().toLocaleString('en-GB', {
-          timeZone: 'Europe/Brussels',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-        })
-      );
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setTime(
+  //       new Date().toLocaleString('en-GB', {
+  //         timeZone: 'Europe/Brussels',
+  //         hour: '2-digit',
+  //         minute: '2-digit',
+  //         second: '2-digit',
+  //       })
+  //     );
+  //   }, 1000);
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
   return (
     <InfoContactWrapper>
-      <BjornTextTopMobile to='/' backgroundcolor='e3e3e3'>Info</BjornTextTopMobile>
+      <BjornTextTopMobile to='/' backgroundcolor='#e3e3e3'>Info</BjornTextTopMobile>
 
       {/* <InfoContactText>
         {t('Adress')}
