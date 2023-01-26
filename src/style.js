@@ -16,6 +16,11 @@ export const fadeDelay = css`
   animation: ${fade} 3s ease-in 3.5s forwards;
 `;
 
+export const fadeDelayWork = css`
+  opacity: 0;
+  animation: ${fade} .5s ease-in 1s forwards;
+`;
+
 export const BjornTextTop = styled(Link)`
   text-decoration: none;
   line-height: 1;

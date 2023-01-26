@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { LanguageChange } from '../../../Components/LanguageChange';
 import { works } from '../../../Constants/Works';
-import { BjornTextTop, StyledLink } from '../../../style';
+import { BjornTextTop, StyledLink, fadeDelayWork } from '../../../style';
 import { searchByTitle, searchIndexByTitle } from '../../../utils/findWorks';
 import useMousePos from '../../../utils/useMousePos';
 import { WorkImage } from './WorkImage';
@@ -42,6 +42,7 @@ const SmallTextBottom = styled(SmallText)`
   font-family: Base Grotesk, sans-serif;
   font-size: 1vw;
   font-size: 2rem;
+  ${fadeDelayWork}
 `;
 
 const BackToWorkLink = styled(StyledLink)`
@@ -96,6 +97,7 @@ const WorkWrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   margin: auto;
+  ${fadeDelayWork}
 `;
 
 export const WorkDetail = () => {
@@ -169,7 +171,6 @@ export const WorkDetail = () => {
   };
 
   const newProject = (e) => {
-    console.log(e.target.innerHTML);
     if (e.target.innerHTML === 'Tekst' || e.target.innerHTML === 'Text') {
       setShowImages(false);
     } else {
