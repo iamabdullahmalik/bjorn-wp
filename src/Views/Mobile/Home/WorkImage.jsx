@@ -30,7 +30,7 @@ const WorkTitle = styled.p`
 export const WorkImage = ({ work, index, imgRefs, setImgRefs }) => {
   let navigate = useNavigate();
   const navigateToDetail = (workTitle) => {
-    navigate(`work/${workTitle}`);
+    navigate(`/work/${workTitle}`);
   };
 
   const imgRef = useRef();
