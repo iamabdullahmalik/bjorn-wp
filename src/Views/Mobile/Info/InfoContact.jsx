@@ -54,45 +54,46 @@ export const InfoContact = () => {
   //   };
   // }, []);
   return (
-    <InfoContactWrapper>
-      {/* <BjornTextTopMobile to='/' backgroundcolor='#e3e3e3'>Info</BjornTextTopMobile> */}
+    <></>
+    // <InfoContactWrapper>
+    //   <BjornTextTopMobile to='/' backgroundcolor='#e3e3e3'>Info</BjornTextTopMobile>
 
-      {/* <InfoContactText>
-        {t('Adress')}
-        <br />
-        +{t('Phone')}
-        <br />
-        <ViewOnMapLink
-          href='https://goo.gl/maps/UWws26kdgo6k8ibD8'
-          target='_blank'>
-          {t('ViewOnMap')}
-        </ViewOnMapLink>
-      </InfoContactText>
-      <InfoContactText>
-        <ContactTitle>{t('GeneralInquiries')}</ContactTitle>
-        <br />
-        <a href={"mailto:" + t("GeneralEmail")}>
-        {t('GeneralEmail')}
-        </a>
-      </InfoContactText>
-      <InfoContactText>
-        <ContactTitle>{t('JobsInternships')}</ContactTitle>
-        <br />
-        <a href={"mailto:" + t("JobEmail")}>{t('JobEmail')}</a>
-      </InfoContactText>
-      <InfoContactText>
-        <ContactTitle>Instagram</ContactTitle>
-        <br />
-        <a href={"https://www.instagram.com/" + t("Instagram").replace('@', '')} target='_blank'>
-        {t('Instagram')}
-        </a>
-      </InfoContactText>
-      <InfoContactText>
-        <ContactTitle>{t('OfficeHours')}</ContactTitle>
-        <br />
-        {t('MondayFriday')}: {t('OfficeHrs')}<br />
-        {t('BelgiumCurrentTime')}: {time}
-      </InfoContactText> */}
-    </InfoContactWrapper>
+    //   <InfoContactText>
+    //     {t('Adress')}
+    //     <br />
+    //     +{t('Phone')}
+    //     <br />
+    //     <ViewOnMapLink
+    //       href='https://goo.gl/maps/UWws26kdgo6k8ibD8'
+    //       target='_blank'>
+    //       {t('ViewOnMap')}
+    //     </ViewOnMapLink>
+    //   </InfoContactText>
+    //   <InfoContactText>
+    //     <ContactTitle>{t('GeneralInquiries')}</ContactTitle>
+    //     <br />
+    //     <a href={"mailto:" + t("GeneralEmail")}>
+    //     {t('GeneralEmail')}
+    //     </a>
+    //   </InfoContactText>
+    //   <InfoContactText>
+    //     <ContactTitle>{t('JobsInternships')}</ContactTitle>
+    //     <br />
+    //     <a href={"mailto:" + t("JobEmail")}>{t('JobEmail')}</a>
+    //   </InfoContactText>
+    //   <InfoContactText>
+    //     <ContactTitle>Instagram</ContactTitle>
+    //     <br />
+    //     <a href={"https://www.instagram.com/" + t("Instagram").replace('@', '')} target='_blank'>
+    //     {t('Instagram')}
+    //     </a>
+    //   </InfoContactText>
+    //   <InfoContactText>
+    //     <ContactTitle>{t('OfficeHours')}</ContactTitle>
+    //     <br />
+    //     {t('MondayFriday')}: {t('OfficeHrs')}<br />
+    //     {t('BelgiumCurrentTime')}: {time}
+    //   </InfoContactText>
+    // </InfoContactWrapper>
   );
 };
