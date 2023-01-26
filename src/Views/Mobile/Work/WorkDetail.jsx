@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { BjornTextTop, BjornTextTopMobile, StyledLink } from '../../../style';
+import { BjornTextTop, BjornTextTopMobile, StyledLink, fadeDelayWork } from '../../../style';
 import { searchByTitle } from '../../../utils/findWorks';
 import { WorkTextInfo } from './WorkTextInfo';
 import CrossSVG from '../../../assets/cross.svg';
@@ -30,6 +30,7 @@ const SmallTextBottom = styled(SmallText)`
   font-family: Base Grotesk, sans-serif;
   display: flex;
   justify-content: space-between;
+  ${fadeDelayWork}
 `;
 
 const BackToWorkLink = styled(StyledLink)`
@@ -89,6 +90,7 @@ const WorkWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  ${fadeDelayWork}
 `;
 
 export const WorkDetail = () => {
