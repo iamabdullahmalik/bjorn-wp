@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 // import Div100vh from 'react-div-100vh';
 import styled from 'styled-components';
-import { BjornTextTopMobile } from '../../../style';
+// import { BjornTextTopMobile } from '../../../style';
 
 const InfoContactWrapper = styled.div`
   padding: 2rem;
@@ -55,7 +55,7 @@ export const InfoContact = () => {
   // }, []);
   return (
     <InfoContactWrapper>
-      <BjornTextTopMobile to='/' backgroundcolor='#e3e3e3'>Info</BjornTextTopMobile>
+      {/* <BjornTextTopMobile to='/' backgroundcolor='#e3e3e3'>Info</BjornTextTopMobile> */}
 
       {/* <InfoContactText>
         {t('Adress')}
