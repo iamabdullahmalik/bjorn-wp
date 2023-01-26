@@ -67,8 +67,7 @@ export const BjornTextTopMobile = styled(Link)`
   font-size: 2rem;
   z-index: 5000;
   position: fixed;
-  background-color: ${(props) =>
-    props.backgroundcolor ? props.backgroundcolor : '#e3e3e3'};
+  background-color: '#e3e3e3';
   width: 100vw;
   display: flex;
   align-items: center;
@@ -76,5 +75,8 @@ export const BjornTextTopMobile = styled(Link)`
   line-height: 0.9;
   font-family: Base Gotesk, sans-serif;
 `;
+
+// background-color: ${(props) =>
+//   props.backgroundcolor ? props.backgroundcolor : '#e3e3e3'};
 
 //transition: background-color 0.3s ease-in;
