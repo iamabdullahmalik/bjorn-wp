@@ -57,7 +57,7 @@ export const InfoContact = () => {
     <InfoContactWrapper>
       <BjornTextTopMobile to='/'>Info</BjornTextTopMobile>
 
-      <InfoContactText>
+      {/* <InfoContactText>
         {t('Adress')}
         <br />
         +{t('Phone')}
@@ -92,7 +92,7 @@ export const InfoContact = () => {
         <br />
         {t('MondayFriday')}: {t('OfficeHrs')}<br />
         {t('BelgiumCurrentTime')}: {time}
-      </InfoContactText>
+      </InfoContactText> */}
     </InfoContactWrapper>
   );
 };
