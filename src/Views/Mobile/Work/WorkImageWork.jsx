@@ -26,6 +26,7 @@ const WorkTitle = styled.p`
   font-size: 1.5rem;
   margin-top: 1rem;
   text-transform: capitalize;
+  font-weight: 300;
 `;
 
 export const WorkImageWork = ({ work, index }) => {

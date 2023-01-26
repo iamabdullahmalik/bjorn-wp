@@ -23,6 +23,7 @@ const SmallText = styled.p`
   font-size: 0.8vw;
   font-size: 1.6rem;
   margin: 0;
+  margin-top:20px;
 `;
 
 const SmallTextBottom = styled(SmallText)`
