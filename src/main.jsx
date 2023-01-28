@@ -3,11 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import { App } from './App';
 import { GlobalStyle } from './Components/GlobalStyle';
-import { fetchWorks } from './utils/getWorks';
 import './i18n';
 import CookieConsent, { Cookies } from "react-cookie-consent";
-
-await fetchWorks();
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
